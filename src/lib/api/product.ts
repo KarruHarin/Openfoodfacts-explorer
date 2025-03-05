@@ -43,6 +43,8 @@ export class ProductsApi {
 			brands: product.brands,
 			quantity: product.quantity,
 			stores: product.stores,
+			origins: product.origins,
+			countries: product.countries,
 			comment: product.comment ?? ''
 		});
 
@@ -181,6 +183,12 @@ export type Product = {
 
 	labels: string;
 	labels_tags: string[];
+
+	origins: string;
+	origins_tags: string[];
+
+	countries: string;
+	countries_tags: string[];
 
 	nutriments: Nutriments;
 

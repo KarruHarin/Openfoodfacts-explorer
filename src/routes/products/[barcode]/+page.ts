@@ -1,5 +1,14 @@
 import type { PageLoad } from './$types';
-import { type Brand, type Label, getTaxo, type Store, type Category, ProductsApi } from '$lib/api';
+import {
+	type Brand,
+	type Label,
+	getTaxo,
+	type Store,
+	type Category,
+	type Country,
+	type Origin,
+	ProductsApi
+} from '$lib/api';
 import { error } from '@sveltejs/kit';
 import { FolksonomyApi } from '$lib/api/folksonomy';
 import { PricesApi, isConfigured as isPricesConfigured } from '$lib/api/prices';
@@ -19,7 +28,8 @@ export const load: PageLoad = async ({ params, fetch }) => {
 	const labels = getTaxo<Label>('labels', fetch);
 	const stores = getTaxo<Store>('stores', fetch);
 	const brands = getTaxo<Brand>('brands', fetch);
-
+	const origins = getTaxo<Origin>('origins', fetch);
+	const countries = getTaxo<Country>('countries', fetch);
 	const off = new OpenFoodFacts(fetch);
 
 	const folkApi = new FolksonomyApi(fetch);
@@ -54,7 +64,9 @@ export const load: PageLoad = async ({ params, fetch }) => {
 			categories,
 			labels,
 			stores,
-			brands
+			brands,
+			countries,
+			origins
 		},
 		prices: await pricesResponse,
 		questions
