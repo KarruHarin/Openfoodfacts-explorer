@@ -1,5 +1,7 @@
 {
 	"welcome": "Welcome to",
 	"intro_1": "<strong>OpenFoodFacts Explorer</strong> is a tool to explore the OpenFoodFacts database.",
-	"intro_2": "You can enter a product code in the search bar above to get started or click on one of the products below."
+	"intro_2": "You can enter a product code in the search bar above to get started or click on one of the products below.",
+	"log_in_message": "Please log in to edit prices",
+	"no_prices_to_edit": "No prices available to edit"
 }
