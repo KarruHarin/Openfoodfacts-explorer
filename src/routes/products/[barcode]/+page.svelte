@@ -167,13 +167,13 @@
 			{/if}
 		</div>
 
-		<div class="flex max-h-56 grow justify-center">
+		<div class="flex grow justify-center">
 			<ImageButton src={product.image_front_url} alt={product.product_name} />
 		</div>
 	</div>
 </Card>
 
-<div class="flex w-full justify-between gap-3 max-md:flex-col lg:max-h-32">
+<div class="flex w-full flex-col justify-between gap-3 sm:flex-row">
 	<a href="#health_card" class="md:w-1/3">
 		<NutriScore grade={product.nutriscore_grade} />
 	</a>

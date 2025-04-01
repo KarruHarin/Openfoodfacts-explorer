@@ -50,12 +50,15 @@
 	let { name, src, textColor, bgColor } = $derived(NUTRI_MAP[normalizedGrade] ?? NUTRI_MAP.unknown);
 </script>
 
-<div
-	class="flex h-full w-full items-center justify-evenly gap-4 rounded-xl p-4 md:max-lg:flex-col {bgColor}"
+<a
+	href="#health_card"
+	class="flex h-full w-full flex-col items-center gap-4 rounded-xl p-4 md:flex-col lg:flex-row {bgColor} hover:bg-opacity-90 transition-all duration-75"
 >
-	<img alt="Nutri-Score" {src} class="h-16" />
-	<div class="flex flex-col">
-		<div class="text-xl {textColor} font-semibold">Nutri-Score {grade.toUpperCase()}</div>
-		<div class="text-sm text-black">{name}</div>
+	<div class="flex flex-col md:flex-col lg:flex-row">
+		<img alt="Nutri-Score" {src} class="h-16" />
+		<div class="flex flex-col">
+			<div class="text-xl {textColor} font-semibold">Nutri-Score {grade.toUpperCase()}</div>
+			<div class="text-sm text-black">{name}</div>
+		</div>
 	</div>
-</div>
+</a>

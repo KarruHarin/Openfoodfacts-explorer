@@ -42,9 +42,10 @@
 	let { name, src, textColor, bgColor } = $derived(NOVA_MAP[grade] ?? NOVA_MAP[0]);
 </script>
 
-<div
-	class="flex h-full w-full items-center justify-evenly gap-4 rounded-xl p-4 md:max-lg:flex-col {bgColor}"
+<a
+	href="#nova"
+	class="flex h-full w-full flex-col items-center gap-4 rounded-xl p-4 md:flex-col lg:flex-row {bgColor} hover:bg-opacity-90 transition-all duration-75"
 >
 	<img alt="Nova Score" {src} class="h-20 transition-all duration-75 hover:brightness-90" />
 	<div class="{textColor} text-xl font-semibold">{name}</div>
-</div>
+</a>
